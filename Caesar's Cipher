@@ -1,0 +1,28 @@
+a = input("введите русское слово:")
+def data_checking(a):
+    """Checking the entered data"""
+    while a.isdigit():
+        a = input("Enter the Russian word:")
+    else:
+        while True:
+            try:
+                if int(a) < 0:
+                    a = input("Enter any word in Russian:")
+            except (TypeError, ValueError):
+                return cipher_of_Caesar(a)
+
+def cipher_of_Caesar(a):
+    """An algorithm that moves letters"""
+    alphabet = ("абвгдеёжзийклмнопрстуфхцчшщъыьэюя")
+    i = int(input("введите число от 1 до 32:"))
+    if i < 1:
+        i = 1
+    elif i > 32:
+        i = 32
+    cipher = ''
+    for c in a:
+        if c in alphabet:
+            cipher += alphabet[(alphabet.index(c) + i) % (len(alphabet))]
+    return print(cipher)
+print(data_checking(a))
+input("To exit, enter any number")
