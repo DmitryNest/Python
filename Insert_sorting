@@ -4,7 +4,7 @@ def sort(array):
     a = array
     for i in range(len(a)):
         x = a[i]
-        j = i;
+        j = i
         while (a[j-1] > x) and (j > 0):
             a[j] = a[j-1]
             j = j - 1
