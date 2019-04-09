@@ -1,0 +1,8 @@
+mas=[1,4,8,9,2,3,6,0,7]
+print("Исходный массив",mas)
+n=len(mas)
+for i in range(n-1):
+    for j in range(n-i-1):
+        if mas[j] > mas[j+1]:
+            mas[j], mas[j+1] = mas[j+1], mas[j]
+print("Отсортированый",mas)
