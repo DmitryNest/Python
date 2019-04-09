@@ -1,0 +1,14 @@
+a=[1,6,7,9,3,4,2,5]
+def sort(mas):
+    """Sort bubble"""
+    last=len(mas)-1
+    for j in range(0,last):
+        for i in range(0,last-j):
+            if mas[i]>mas[i+1]:
+                mas[i],mas[i+1]=mas[i+1],mas[i]
+    return(mas)
+
+
+print("Начальный массив",a)
+new=sort(a).copy()
+print("Отсортированый массив",new)
