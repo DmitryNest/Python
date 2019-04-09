@@ -1,5 +1,5 @@
 mas=[2,7,4,5,3,1,8,0]
-print(mas)
+print("Исходный массив",mas)
 def sort(array):
     a = array
     for i in range(len(a)):
@@ -12,4 +12,4 @@ def sort(array):
         print(a)
     return (array)
 mas2=sort(mas).copy()
-print(mas2)
+print("Отсортированый массив",mas2)
