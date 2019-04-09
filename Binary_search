@@ -1,0 +1,20 @@
+def binar(list,nambeisk,start,stop):
+    if start > stop:
+        return False
+    else:
+        mid=(start+stop)// 2
+        if nambeisk == list[mid]:
+            return mid
+        elif nambeisk < list[mid]:
+            return binar(list,nambeisk,start,mid-1)
+        else:
+            return binar(list,nambeisk,mid+1,stop)
+list=[1,4,6,7,9,5,9,4,7,6,2,3,6,9,0,1]
+nambeisk=int(input("Введите искомое число:"))
+start=0
+stop=len(list)
+x=binar(list,nambeisk,start,stop)
+if x==False:
+    print("Item",nambeisk,"Not found")
+else:
+    print("Item",nambeisk,"Found at index",x)
