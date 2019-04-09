@@ -1,0 +1,15 @@
+mas=[2,7,4,5,3,1,8,0]
+print(mas)
+def sort(array):
+    a = array
+    for i in range(len(a)):
+        x = a[i]
+        j = i;
+        while (a[j-1] > x) and (j > 0):
+            a[j] = a[j-1]
+            j = j - 1
+        a[j] = x
+        print(a)
+    return (array)
+mas2=sort(mas).copy()
+print(mas2)
