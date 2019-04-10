@@ -1,0 +1,12 @@
+def f(x):
+    y=1+x
+    return (y)
+def treyg (x_min,x_max, n):
+    dx= (x_max-x_min)/n
+    arean= 0
+    x=x_min
+    for i in range(n):
+        arean=arean+dx*f(x)
+        x=x+dx
+    return (arean)
+print(treyg(1,7,5))
