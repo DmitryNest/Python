@@ -1,0 +1,14 @@
+message = input('Введите текст на русском языке для зашифровки: ').lower()
+kl = input('Введите слово-ключ: ')
+alph = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о',
+      'п','р','с','т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я']
+new = []
+newMes = ''
+for i in message:
+    if i not in alph:
+             new.append(i)
+    else:
+        new.append(alph[(alph.index(i) + len(kl)) % len(alph)])
+for i in range(len(new)):
+    newMes += new[i]
+print('Зашифрованное сообщение: ', newMes)
